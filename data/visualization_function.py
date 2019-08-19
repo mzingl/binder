@@ -25,7 +25,7 @@ paths = [(G, X), (X, M), (M, G), (G, Z), (Z, R), (R, A), (A, Z)]
 TBL = load_data()
 
 def func(model = TBL['LNO unstrained'], crystal_field = 0.0, hopping_x = 1.0, hopping_z=1.0, kz_plot1 = 0.0,
-         kz_plot2 = 0.5, Nk_path = 20, Nk_FS = 10):
+         kz_plot2 = 1.0, Nk_path = 20, Nk_FS = 10):
     
     lw = 5
     hopping = copy.deepcopy(model._hop)

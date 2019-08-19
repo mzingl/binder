@@ -211,14 +211,14 @@ def load_data():
     for ifni, fni in enumerate(fn):
 
         # -- Read Wannier90 results
-        path = '/home/manuel/TESTS/LaNiO3_new_FS/LNO_ap3_'+fni+'_W90/'
+        path = '/home/triqs/LNO_ap3_'+fni+'_W90/'
         hopping, num_wann = parse_hopping_from_wannier90_hr_dat(path + 'w2w_hr.dat')
         units = parse_lattice_vectors_from_wannier90_wout(path + 'w2w.wout')
         E_ref, w_ref = parse_band_structure_from_wannier90_band_dat(path + 'w2w_band.dat')
         TBL[modelname[ifni]] = TBLattice(units = units, hopping = hopping, orbital_positions = [(0,0,0)]*num_wann,
                              orbital_names = [str(i) for i in xrange(num_wann)])
 
-    path = '/home/manuel/TESTS/LaNiO3_new_FS/LNO_ap3_863_W90/'
+    path = '/home/triqs/LNO_ap3_863_W90/'
     hopping, num_wann = parse_hopping_from_wannier90_hr_dat(path + 'w2w_hr.dat')
     units = parse_lattice_vectors_from_wannier90_wout(path + 'w2w.wout')    
 
