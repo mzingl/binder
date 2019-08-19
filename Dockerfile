@@ -14,6 +14,8 @@ RUN mkdir tprf.build
 WORKDIR tprf.build
 RUN CXX=/usr/bin/g++ cmake ../tprf.src
 RUN make install
+RUN jupyter nbextension enable --py widgetsnbextension
+RUN jupyter nbextension enable --py --sys-prefix widgetsnbextension
 ARG NB_USER=triqs
 ARG NB_UID=1000
 RUN usermod -u $NB_UID -l $NB_USER -d /home/$NB_USER -m triqs
