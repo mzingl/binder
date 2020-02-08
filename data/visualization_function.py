@@ -22,7 +22,7 @@ A = np.array([+0.50,+0.50,+0.50])
 paths = [(G, X), (X, M), (M, G), (G, Z), (Z, R), (R, A), (A, Z)]
 
 # Load Wannier model
-TBL = get_TBL('/home/manuel/TESTS/binder/data/LNO_ap3_863_W90/')
+TBL = get_TBL('/home/jovyan/LNO_ap3_863_W90/')
 
 # Plot function
 def func(d_cf_z2 = 0.0, d_cf_x2y2 = 0.0, hopping_x = 1.0, hopping_z=1.0, 
