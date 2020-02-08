@@ -53,7 +53,12 @@ def func(d_cf_z2 = 0.0, d_cf_x2y2 = 0.0, hopping_x = 1.0, hopping_z=1.0,
 
     tbl = TBLattice(units = TBL.Units, hopping = hopping, orbital_positions = TBL.OrbitalPositions,
                     orbital_names = TBL.OrbitalNames)
-
+    matplotlib.rcParams.update({'font.size':35})
+    matplotlib.rcParams['figure.figsize'] = (25,10)
+    matplotlib.rcParams['xtick.major.pad']='10'
+    matplotlib.rcParams['ytick.major.pad']='10'
+    matplotlib.rc('xtick', labelsize=35) 
+    matplotlib.rc('ytick', labelsize=35)
     fig = plt.figure()
     plt.subplot(1,2,1)
     plt.subplots_adjust(wspace=0.4)
@@ -106,19 +111,19 @@ def func(d_cf_z2 = 0.0, d_cf_x2y2 = 0.0, hopping_x = 1.0, hopping_z=1.0,
 style = {'description_width': '100px'}
 d_cf_z2_slider = widgets.FloatSlider(min=-1.0, max=1.0, step=0.01, value=0.0, 
                                      description=r'$\Delta \epsilon_{z^2}$', 
-                                     continuous_update=False, style=style)
+                                     continuous_update=False)
 d_cf_x2y2_slider = widgets.FloatSlider(min=-1.0, max=1.0, step=0.01, value=0.0, 
                                        description=r'$\Delta \epsilon_{x^2-y^2}$', 
-                                       continuous_update=False, style=style)
+                                       continuous_update=False)
 s_h_ab_slider = widgets.FloatSlider(min=0.0, max=2.0, step=0.01, value=1.0, 
-                                    description=r'$t_{ab}$ scaling factor', 
-                                    continuous_update=False, style=style)
+                                    description=r'$t_{ab}$ scaling', 
+                                    continuous_update=False)
 s_h_c_slider = widgets.FloatSlider(min=0.0, max=2.0, step=0.01, value=1.0, 
-                                   description=r'$t_{c}$ scaling factor', 
-                                   continuous_update=False, style=style)
+                                   description=r'$t_{c}$ scaling', 
+                                   continuous_update=False)
 kz_slider = widgets.FloatSlider(min=0.0, max=1.0, step=0.01, value=0.0, 
                                 description=r'$k_z$', 
-                                continuous_update=False, style=style)
+                                continuous_update=False)
 Nk_path_slider = widgets.IntSlider(min=5, max=50, step=5, value=10, 
                                    description=r'$N_k$', 
                                    continuous_update=False)
