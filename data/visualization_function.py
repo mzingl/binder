@@ -11,6 +11,13 @@ import ipywidgets as widgets
 from TB_functions import *
 import matplotlib
 
+matplotlib.rcParams.update({'font.size':35})
+matplotlib.rcParams['figure.figsize'] = (25,10)
+matplotlib.rcParams['xtick.major.pad']='10'
+matplotlib.rcParams['ytick.major.pad']='10'
+matplotlib.rc('xtick', labelsize=35) 
+matplotlib.rc('ytick', labelsize=35)
+
 # Define K-Points and PATH
 G = np.array([ 0.00, 0.00, 0.00])
 X = np.array([+0.50, 0.00, 0.00])
@@ -22,8 +29,8 @@ A = np.array([+0.50,+0.50,+0.50])
 paths = [(G, X), (X, M), (M, G), (G, Z), (Z, R), (R, A), (A, Z)]
 
 # Load Wannier model
-#TBL = get_TBL('/home/jovyan/LNO_ap3_863_W90/')
-TBL = get_TBL('/home/manuel/TESTS/binder/data/LNO_ap3_863_W90/')
+TBL = get_TBL('/home/jovyan/LNO_ap3_863_W90/')
+#TBL = get_TBL('/home/manuel/TESTS/binder/data/LNO_ap3_863_W90/')
 
 # Plot function
 def func(d_cf_z2 = 0.0, d_cf_x2y2 = 0.0, hopping_x = 1.0, hopping_z=1.0, 
