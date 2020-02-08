@@ -22,7 +22,8 @@ A = np.array([+0.50,+0.50,+0.50])
 paths = [(G, X), (X, M), (M, G), (G, Z), (Z, R), (R, A), (A, Z)]
 
 # Load Wannier model
-TBL = get_TBL('/home/jovyan/LNO_ap3_863_W90/')
+#TBL = get_TBL('/home/jovyan/LNO_ap3_863_W90/')
+TBL = get_TBL('/home/manuel/TESTS/binder/data/LNO_ap3_863_W90/')
 
 # Plot function
 def func(d_cf_z2 = 0.0, d_cf_x2y2 = 0.0, hopping_x = 1.0, hopping_z=1.0, 
@@ -113,10 +114,10 @@ kz_slider = widgets.FloatSlider(min=0.0, max=1.0, step=0.01, value=0.0,
                                 continuous_update=False, style=style)
 Nk_path_slider = widgets.IntSlider(min=5, max=50, step=5, value=10, 
                                    description=r'$N_k$', 
-                                   continuous_update=False, style=style)
+                                   continuous_update=False)
 Nk_FS_slider = widgets.IntSlider(min=5, max=50, step=5, value=10, 
                                  description=r'$N_{FS}$', 
-                                 continuous_update=False, style=style)
+                                 continuous_update=False)
 reset_button = widgets.Button(description = "Reset")
 
 def reset_values(b):
