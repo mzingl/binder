@@ -9,7 +9,7 @@ RUN apt-get update && sudo apt-get install -y software-properties-common apt-tra
 RUN curl -L https://users.flatironinstitute.org/~ccq/triqs/bionic/public.gpg | sudo apt-key add -
 RUN add-apt-repository "deb https://users.flatironinstitute.org/~ccq/triqs/bionic/ /"
 RUN apt-get update
-RUN git clone -b 2.2.x https://github.com/TRIQS/tprf tprf.src
+RUN git clone -b 2.1.x https://github.com/TRIQS/tprf tprf.src
 RUN mkdir tprf.build
 WORKDIR tprf.build
 RUN CXX=/usr/bin/g++ cmake ../tprf.src
