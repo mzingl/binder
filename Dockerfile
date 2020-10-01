@@ -1,4 +1,4 @@
-FROM flatironinstitute/triqs:2.2.2
+FROM flatironinstitute/triqs:2.2.1
 
 WORKDIR /
 USER root
